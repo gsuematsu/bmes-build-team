@@ -1,16 +1,20 @@
+// Circuit Key:
+// Joystick or potentiometer should be plugged into A0
+// Servo should be plugged into D9
 
 #include <Servo.h>
 
 Servo myServo;  // create servo object to control a servo
 
-int pinPot = A7;  // analog pin used to connect the potentiometer
+int pinPot = A0;  // analog pin used to connect the potentiometer
 int val;    // variable to read the value from the analog pin
 int pos;
 int vel;
+int pinServo = 9;
 
 void setup() {
   
-  myServo.attach(9);  // attaches the servo on pin 9 to the servo object
+  myServo.attach(pinServo);  // attaches the servo on pin 9 to the servo object
   Serial.begin(9600);
 }
 

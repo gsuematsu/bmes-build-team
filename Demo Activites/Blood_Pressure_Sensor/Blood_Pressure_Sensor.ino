@@ -6,16 +6,16 @@
 const int sensorPin = A0;
 const int LEDPin = 2;
 int sensorVal;
-int ambientTemp;
+int ambientPressure;
 
-const int thresh = 60;
+const int thresh = 900;
 
 void setup() {
   // put your setup code here, to run once:
   Serial.begin(9600);
   pinMode(LEDPin, OUTPUT);
   digitalWrite(LEDPin, HIGH);
-  ambientTemp = analogRead(sensorPin);
+  ambientPressure = analogRead(sensorPin);
   digitalWrite(LEDPin, LOW);
 }
 
@@ -26,7 +26,7 @@ void loop() {
   sensorVal = analogRead(sensorPin);
   Serial.println(sensorVal);
 
-  if(sensorVal < ambientTemp - thresh){
+  if(sensorVal < ambientPressure - thresh){
     digitalWrite(LEDPin, HIGH);
   }
   else{
