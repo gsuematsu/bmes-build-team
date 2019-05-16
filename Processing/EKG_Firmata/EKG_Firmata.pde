@@ -24,7 +24,7 @@ void setup()
   // Modify this line, by changing the "0" to the index of the serial
   // port corresponding to your Arduino board (as it appears in the list
   // printed by the line above).
-  arduino = new Arduino(this, Arduino.list()[2], 57600);
+  arduino = new Arduino(this, Arduino.list()[1], 57600);
   
   values = new int[width];
   zoom = 2.0f;
