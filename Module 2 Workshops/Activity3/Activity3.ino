@@ -1,4 +1,4 @@
-pinBTN = 9;
+pinBTN = 4;
 pinLED = 10;
 bool LEDon = false; // boolean to keep track of LED state
 
